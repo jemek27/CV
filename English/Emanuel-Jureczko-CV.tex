@@ -1,0 +1,160 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+
+% Custom section command
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{*1.5}{*0.5}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Custom commands
+\newcommand{\name}[1]{
+  \begin{center}
+    \Huge\textbf{#1}
+  \end{center}
+  \vspace{-0.5em}
+  \hrule height 0.4pt width \textwidth
+  \vspace{0.5em}
+}
+\newcommand{\contact}[5]{
+  \begin{center}
+    #1 | #2 | #3 \\
+    #4 | #5
+  \end{center}
+  \vspace{-0.5em}
+  \hrule height 0.4pt width \textwidth
+  \vspace{0.5em}
+}
+
+\newcommand{\spacedSection}[1]{
+  \vspace{0.1em}
+  \section{#1}
+  \vspace{1em}
+}
+
+\begin{document}
+
+\name{Emanuel Jureczko}
+\vspace{-0.5em}
+\contact{+48 518 734 135}{Informatics Student}{Gliwice, Poland}{emajure27@gmail.com}{github.com/jemek27}
+% {\href{mailto:emajure27@gmail.com}{emajure27@gmail.com}}{\href{https://github.com/jemek27}{github.com/jemek27}}
+
+\vspace{-0.5em}
+\begin{justify}
+\textit{Third-year student with a good theoretical background and experience in low- and high-level programming.
+In my free time I enjoy working on side projects to learn new technologies and develop my skills.
+I am now looking to transition from personal and study projects to commercial ones, where I can apply my knowledge 
+in a professional setting, contribute to real-world applications, and collaborate with a team to deliver impactful 
+solutions.}
+\end{justify}
+
+\spacedSection{Areas of expertise}
+
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{flushleft}
+      \begin{itemize}[leftmargin=0.5cm]
+          \setlength\itemsep{0.4em}
+          \item Programming Languages – \textbf{Java, C, C++, C\#, Asm, SQL, Python, JavaScript}
+          \item Version control - \textbf{GitHub}
+      \end{itemize}
+  \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{flushleft}
+      \begin{itemize}[leftmargin=0.5cm]
+          \setlength\itemsep{0.4em}
+          \item Backend – \textbf{Spring Boot}
+          \item Frontend – \textbf{HTML, CSS, JS}
+      \end{itemize}
+  \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{flushleft}
+      \begin{itemize}[leftmargin=0.5cm]
+          \setlength\itemsep{0.4em}
+          \item Databases – \textbf{PostgreSQL}
+          \item Containers – \textbf{Docker}
+      \end{itemize}
+  \end{flushleft}
+\end{minipage}
+
+\vspace{1em}
+\spacedSection{EXPERIENCE}
+
+\textbf{Internship - Fullstack Developer} \hfill September 2024 \\ [0.4em]
+RED Electronics \hfill \textit{Gliwice, Poland}
+\begin{itemize}[leftmargin=0.5cm]
+\itemsep-3pt {}
+    \item Development of a web application for data visualisation and device control. 
+    Project on GitHub in the Webapp repository.
+    \begin{itemize}[leftmargin=0.5cm]
+      \itemsep-3pt {}
+          \item Frontend: HTML, CSS, JavaScript
+          \item Backend: Node.js, \textbf{Python} (LoRa data input/output)
+          \item Database: \textbf{PostgreSQL} 
+      \end{itemize}
+\end{itemize}
+
+\spacedSection{Education}
+  
+\begin{itemize}[leftmargin=0.5cm]
+  \itemsep-3pt {}
+      \item Informatics, Silesian University of Technology Gliwice \hfill {2022 - Present}
+      \item Graphic arts and digital printing technician, CKZiU Strzelce Opolskie \hfill {2018 - 2022}
+\end{itemize}
+
+\spacedSection{Languages}
+  
+\begin{itemize}[leftmargin=0.5cm]
+  \itemsep-3pt {}
+    \item German – B2/C1 (Upper Intermediate/Advanced) – TestDaF certificate: 4/4/3/4
+    \item English – B2 (Upper Intermediate)
+    \item Polish – Native speaker
+\end{itemize}
+
+\spacedSection{Projects}
+
+\begin{itemize}[leftmargin=0.5cm]
+  \setlength\itemsep{0.4em}
+      \item \textbf{Ecommerce App} \\
+      A work-in-progress project designed to explore and apply modern technologies. 
+      The project aims to deepen my knowledge of backend development, security, and deployment practices.\\ [.4em]
+      \textit{Tech stack:} \textbf{Java, Spring Boot, Spring Data JPA, PostgreSQL,  Docker, RESTful API, Spring Security + JWT}
+      
+      \item \textbf{Gaussian Blur ASM vs C++} \\
+      Developed during the 5th semester as part of an assembly language course.
+      It focuses on comparing execution times between custom C++ and Assembly libraries.
+      The implemented libraries apply a Gaussian blur filter to an image.\\ [.3em]
+      \textit{Tech stack:} \textbf{Asm, C++, C\#}
+
+      \item \textbf{Sudoku Solver} \\
+      A Sudoku solver that mimics human-like solving strategies rather than relying on brute force. \\ [.3em]
+      \textit{Tech stack:} \textbf{C++}
+      
+      \item \textbf{Webapp} \\
+      Part of an internship project on LoRa-based communication, created at RED Electronics. 
+      The project manages the reception of data and visualises it. It also allows sending control signals to the sensor unit. \\ [.3em]
+      \textit{Tech stack:} \textbf{HTML, CSS, JavaScript, Node.js, Python, PostgreSQL}
+
+      \item \textbf{Pac-Man} \\
+      4th semester programming project. Own implementation of Pac-Man in SFML 2.5.1 cpp \\ [.3em]
+      \textit{Tech stack:} \textbf{C++ SFML}
+
+      \item \textbf{Console Snake} \\
+      A simple Snake game running in the Windows console.  \\ [.3em]
+      \textit{Tech stack:} \textbf{C}
+\end{itemize}
+
+
+\end{document}
